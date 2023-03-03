@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Creation</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $(".container").append('<div class="content" style=" color: red; font-size:50px; ">This is the Text created and designed by Jquery</div>');   
+                
+               
+            });    
+        });
+        </script>
+        </head>
+        <body>
+            <div class="container">
+                <h1>Click the button to see div element</h1>
+                <p><button type="button">Print DIV</button></p>
+            </div>
+        </body>
+</html> 

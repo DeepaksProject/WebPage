@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Text Box Limit</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+    
+      var textarea = $('#Textarea');
+      var counter = $('#charcount');
+      
+
+      var maxLength = 10;
+      
+    
+      textarea.keyup(function() {
+        var length = textarea.val().length;
+        counter.text(length + '/' + maxLength);
+        
+    
+        if (length > maxLength) {
+          textarea.val(textarea.val().substring(0, maxLength));
+          counter.text(maxLength + '/' + maxLength);
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+    <h1 class="container">This is the Text Box with limit of 10 charaters</h1><br>
+    <div class="container">
+    <label for="textarea">Enter Your Name</label><br>
+  <textarea id="Textarea"></textarea>
+  <div id="charcount">0/10</div>
+  </div>
+</body>
+</html>
